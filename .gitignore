@@ -168,3 +168,5 @@ ENV/
 /site
 
 # End of https://www.gitignore.io/api/pycharm,python,django
+/simplemooc/core/migrations/
+/simplemooc/courses/migrations/
