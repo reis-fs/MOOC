@@ -171,3 +171,5 @@ ENV/
 /simplemooc/core/migrations/
 /simplemooc/courses/migrations/
 .idea/
+
+.vscode
