@@ -1,42 +1,42 @@
 # Preparando o Ambiente de Desenvolvimento (Linux)
 
 ## Atualização do sistema
-sudo apt-get update && sudo apt-get upgrade
+<code>sudo apt-get update && sudo apt-get upgrade</code>
 
 ## Pacotes para python 2x e 3x
-sudo apt-get install -y python-pip python3-pip build-essential git python python3  python-dev python3-dev libsdl2-dev  libsdl2-image-dev  libsdl2-mixer-dev  libsdl2-ttf-dev libportmidi-dev  libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev ffmpeg
+<code>sudo apt-get install -y python-pip python3-pip build-essential git python python3  python-dev python3-dev libsdl2-dev  libsdl2-image-dev  libsdl2-mixer-dev  libsdl2-ttf-dev libportmidi-dev  libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev ffmpeg</code>
 
 ## Caso ocorra erro na instalação do ffmpeg
-sudo apt-get install libav-tools
+<code>sudo apt-get install libav-tools</code>
 
 ## Instalação/atualização do pip, virtualenv e setuptools
-sudo pip install --upgrade pip virtualenv setuptools
+<code>sudo pip install --upgrade pip virtualenv setuptools</code>
 
 ## Instalação do virtualenvwrapper
-sudo pip install virtualenvwrapper
+<code>sudo pip install virtualenvwrapper</code>
 
 ### adicionar no final do arquivo “~/.bashrc”
-#local onde os ambientes serão armazenados
-export WORKON_HOME=~/.virtualenvs
-#script de ativação do virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh (este caminho pode ser diferente dependendo de sua distribuição)
-#define que não será utilizado os pacotes instalados no python default
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-#define que não é possível utilizar o pip fora de algum ambiente virtual
-export PIP_REQUIRE_VIRTUALENV=true
+<code>#local onde os ambientes serão armazenados</code><br>
+<code>export WORKON_HOME=~/.virtualenvs</code><br>
+<code>#script de ativação do virtualenvwrapper</code><br>
+<code>source /usr/local/bin/virtualenvwrapper.sh</code> (este caminho pode ser diferente dependendo de sua distribuição)<br>
+<code>#define que não será utilizado os pacotes instalados no python default</code><br>
+<code>export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'</code><br>
+<code>#define que não é possível utilizar o pip fora de algum ambiente virtual</code><br>
+<code>export PIP_REQUIRE_VIRTUALENV=true</code><br>
   
-Após este procedimento, crie um ambiente virtual com: mkvirtualenv (nome do ambiente) -p (versão do python)
-Obs.: Se uma versão não for definida, ele utiliza a versão padrão do Sistema.
-mkvirtualenv mooc -p python3
-ou
-mkvirtualenv mooc -p /usr/bin/python3 (pode ser alterado caso utilize outra versão do Python)
+Após este procedimento, crie um ambiente virtual com: mkvirtualenv (nome do ambiente) -p (versão do python)<br>
+Obs.: Se uma versão não for definida, ele utiliza a versão padrão do Sistema.<br>
+<code>mkvirtualenv mooc -p python3</code><br>
+ou<br>
+<code>mkvirtualenv mooc -p /usr/bin/python3</code> (pode ser alterado caso utilize outra versão do Python)<br>
 
-Finalmente, para ativar o ambiente virtual, utilize: workon (nome do ambiente)
-workon mooc
-Para desativar, utilize: deactivate
+Finalmente, para ativar o ambiente virtual, utilize: workon (nome do ambiente)<br>
+<code>workon mooc</code><br>
+Para desativar, utilize: <code>deactivate</code><br>
 
-Com o ambiente ativado, instale o Django e o Pillow (para trabalhar com imagens):
-pip install django Pillow
+Com o ambiente ativado, instale o Django e o Pillow (para trabalhar com imagens):<br>
+<code>pip install django Pillow</code><br>
 
 -------------------------------------------------------------------------------------------------------------
 
