@@ -1,21 +1,21 @@
 # Preparando o Ambiente de Desenvolvimento (Linux)
 
-## Atualização do sistema
+### Atualização do sistema
 <code>sudo apt-get update && sudo apt-get upgrade</code>
 
-## Pacotes para python 2x e 3x
+### Pacotes para python 2x e 3x
 <code>sudo apt-get install -y python-pip python3-pip build-essential git python python3  python-dev python3-dev libsdl2-dev  libsdl2-image-dev  libsdl2-mixer-dev  libsdl2-ttf-dev libportmidi-dev  libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev ffmpeg</code>
 
-## Caso ocorra erro na instalação do ffmpeg
+### Caso ocorra erro na instalação do ffmpeg
 <code>sudo apt-get install libav-tools</code>
 
-## Instalação/atualização do pip, virtualenv e setuptools
+### Instalação/atualização do pip, virtualenv e setuptools
 <code>sudo pip install --upgrade pip virtualenv setuptools</code>
 
-## Instalação do virtualenvwrapper
+### Instalação do virtualenvwrapper
 <code>sudo pip install virtualenvwrapper</code>
 
-### adicionar no final do arquivo “~/.bashrc”
+#### adicionar no final do arquivo “~/.bashrc”
 <code>#local onde os ambientes serão armazenados</code><br>
 <code>export WORKON_HOME=~/.virtualenvs</code><br>
 <code>#script de ativação do virtualenvwrapper</code><br>
@@ -37,6 +37,11 @@ Para desativar, utilize: <code>deactivate</code><br>
 
 Com o ambiente ativado, instale o Django e o Pillow (para trabalhar com imagens):<br>
 <code>pip install django Pillow</code><br>
+
+#### Baixe o projeto e através do terminal navegue até a pasta "simplemooc" onde contém o arquivo manage.py e execute os comandos:<br>
+<code>python manage.py makemigrations</code><br>
+<code>python manage.py migrate</code><br>
+<code>python manage.py runserver</code><br>
 
 -------------------------------------------------------------------------------------------------------------
 
