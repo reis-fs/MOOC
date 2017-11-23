@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 
+
 class CourseManager(models.Manager):
     def search(self, query):
         return self.get_queryset().filter(
